@@ -9,7 +9,7 @@ const btnForm = document.getElementById('btnForm')
 btnForm.addEventListener('click', (e) => {
   e.preventDefault()
   const inputEmail = document.getElementById('email').value
-  const url = request(`https://helioheroku.herokuapp.com/2factors/${inputEmail}`)
+  const url = request(`https://acmebunkerapi.herokuapp.com/2factors/${inputEmail}`)
   console.log(url)
 })
 
