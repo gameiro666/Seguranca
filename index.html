@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>ACME Bunker</title>
+  <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR"></script>
+  <?php
+    include_once("recaptchalib.php");
+  ?>
 </head>
 <body>
   <a class="logo" href="#"><img src="img/bunker.png" alt="ACME"> </a>    
@@ -13,12 +18,13 @@
     <h2>Login</h2>
     <p>Insira abaixo suas informações de acesso<p>
     <div class="login-container">
-      <form>
+      <form method="POST" action="recaptchalib.php">
         <p><label>E-mail</label></p>
-        <input type="text" placeholder="Digite seu e-mail" id="email">
+        <input type="text" placeholder="Digite seu e-mail">
         <p><label>Senha</label></p>
         <input type="password" placeholder="Digite sua senha">
-        <p><button id="btnForm">Entrar</button></p>
+        <p><button type="submit">Entrar</button></p>
+        <div class="g-recaptcha" data-sitekey="6LcXBecaAAAAAC735lGvP8IXzgRhD8K9v3-r04CY"></div>
       </form>
       </div>
     </section>
@@ -26,7 +32,5 @@
       <p> Criado em 2021 por Felipe Mathias e Thalles Galvão, alunos do 4º Semestre de Sistemas para Internet na FATEC Rubens Lara</p>
       <p>© Todos os direitos reservados.</p>
     </footer>
-    <script src="js/main.js"></script>
 </body>
 </html>
-
